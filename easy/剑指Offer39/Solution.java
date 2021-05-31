@@ -37,4 +37,18 @@ class Solution {
         }
         return 0;
     }
+	/*
+	摩尔投票，牛*
+	
+	执行用时：1 ms, 在所有 Java 提交中击败了99.97%的用户
+	内存消耗：41.5 MB, 在所有 Java 提交中击败了82.41%的用户
+	*/
+	public static int majorityElement(int[] nums) {
+        int x=0,votes=0;
+        for(int num:nums){
+            if(votes==0) x=num;
+            votes+=x==num?1:-1;
+        }
+        return x;
+    }
 }
