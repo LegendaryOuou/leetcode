@@ -13,7 +13,7 @@ class Solution {
 	一次遍历
 	
 	执行用时：1 ms, 在所有 Java 提交中击败了99.79%的用户
-	内存消耗：39 MB, 在所有 Java 提交中击败了96.69%的用户
+	内存消耗：38.7 MB, 在所有 Java 提交中击败了99.54%的用户
 	*/
     public ListNode removeElements(ListNode head, int val) {
         ListNode p1=null,p2=head,root;
