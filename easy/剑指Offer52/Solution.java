@@ -41,4 +41,25 @@ public class Solution {
         }
         return null;
     }
+	/*
+	双指针你方式实现
+	
+	执行用时：1 ms, 在所有 Java 提交中击败了100.00%的用户
+	内存消耗：41.2 MB, 在所有 Java 提交中击败了47.77%的用户
+	*/
+	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode p1=headA,p2=headB;
+        if(p1==null||p2==null) return null;
+        while(p1!=p2){
+            if(p1==null){
+                p1=headB;
+            }else if(p2==null){
+                p2=headA;
+            }else{
+                p1=p1.next;
+                p2=p2.next;
+            }
+        }
+        return p1;
+    }
 }
